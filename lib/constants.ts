@@ -1,0 +1,121 @@
+export const BANK_OPTIONS = [
+  { label: "State Bank of India", value: "sbi", type: "public" },
+  { label: "Bank of Baroda", value: "bank_of_baroda", type: "public" },
+  { label: "Bank of India", value: "bank_of_india", type: "public" },
+  { label: "Canara Bank", value: "canara_bank", type: "public" },
+  {
+    label: "Central Bank of India",
+    value: "central_bank_of_india",
+    type: "public",
+  },
+  { label: "Indian Bank", value: "indian_bank", type: "public" },
+  {
+    label: "Indian Overseas Bank",
+    value: "indian_overseas_bank",
+    type: "public",
+  },
+  { label: "Punjab & Sind Bank", value: "punjab_sind_bank", type: "public" },
+  {
+    label: "Punjab National Bank",
+    value: "punjab_national_bank",
+    type: "public",
+  },
+  { label: "UCO Bank", value: "uco_bank", type: "public" },
+  {
+    label: "Union Bank of India",
+    value: "union_bank_of_india",
+    type: "public",
+  },
+  {
+    label: "Bank of Maharashtra",
+    value: "bank_of_maharashtra",
+    type: "public",
+  },
+
+  { label: "Axis Bank", value: "axis_bank", type: "private" },
+  { label: "Bandhan Bank", value: "bandhan_bank", type: "private" },
+  { label: "CSB Bank", value: "csb_bank", type: "private" },
+  { label: "City Union Bank", value: "city_union_bank", type: "private" },
+  { label: "DCB Bank", value: "dcb_bank", type: "private" },
+  { label: "Dhanlaxmi Bank", value: "dhanlaxmi_bank", type: "private" },
+  { label: "Federal Bank", value: "federal_bank", type: "private" },
+  { label: "HDFC Bank", value: "hdfc_bank", type: "private" },
+  { label: "ICICI Bank", value: "icici_bank", type: "private" },
+  { label: "IDBI Bank", value: "idbi_bank", type: "private" },
+  { label: "IDFC First Bank", value: "idfc_first_bank", type: "private" },
+  { label: "IndusInd Bank", value: "indusind_bank", type: "private" },
+  {
+    label: "Jammu & Kashmir Bank",
+    value: "jammu_kashmir_bank",
+    type: "private",
+  },
+  { label: "Karnataka Bank", value: "karnataka_bank", type: "private" },
+  { label: "Karur Vysya Bank", value: "karur_vysya_bank", type: "private" },
+  {
+    label: "Kotak Mahindra Bank",
+    value: "kotak_mahindra_bank",
+    type: "private",
+  },
+  { label: "Nainital Bank", value: "nainital_bank", type: "private" },
+  { label: "RBL Bank", value: "rbl_bank", type: "private" },
+  { label: "South Indian Bank", value: "south_indian_bank", type: "private" },
+  {
+    label: "Tamilnad Mercantile Bank",
+    value: "tamilnad_mercantile_bank",
+    type: "private",
+  },
+  { label: "YES Bank", value: "yes_bank", type: "private" },
+
+  {
+    label: "AU Small Finance Bank",
+    value: "au_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Capital Small Finance Bank",
+    value: "capital_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Equitas Small Finance Bank",
+    value: "equitas_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "ESAF Small Finance Bank",
+    value: "esaf_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Suryoday Small Finance Bank",
+    value: "suryoday_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Ujjivan Small Finance Bank",
+    value: "ujjivan_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Utkarsh Small Finance Bank",
+    value: "utkarsh_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Jana Small Finance Bank",
+    value: "jana_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Shivalik Small Finance Bank",
+    value: "shivalik_small_finance_bank",
+    type: "small_finance",
+  },
+  {
+    label: "Unity Small Finance Bank",
+    value: "unity_small_finance_bank",
+    type: "small_finance",
+  },
+
+  { label: "OneCard", value: "onecard", type: "fintech" },
+];
