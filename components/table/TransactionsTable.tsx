@@ -112,11 +112,19 @@ export function TransactionsTable({
       }),
       columnHelper.accessor("createdBy", {
         header: "Created By",
-        cell: (info) => (
-          <span className="text-slate-500 text-xs capitalize">
-            {usersMap[info.getValue()] || ""}
-          </span>
-        ),
+        cell: (info) => {
+          const id = info.getValue();
+          if (!id)
+            return (
+              <span className="text-slate-400 font-normal italic">System</span>
+            );
+          const name = usersMap[id];
+          return (
+            <span className="text-slate-500 border border-slate-100 bg-slate-50 px-2 py-0.5 rounded-md text-sm font-medium capitalize truncate max-w-[100px] inline-block">
+              {name}
+            </span>
+          );
+        },
       }),
       columnHelper.display({
         id: "actions",

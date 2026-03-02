@@ -127,7 +127,7 @@ export default function DashboardPage() {
             Recent Transactions
           </h2>
           <Link
-            href="/dashboard/transactions"
+            href="/transactions"
             className="text-primary hover:text-primary-hover flex items-center gap-1.5 text-sm font-medium transition-colors"
           >
             View All

@@ -22,20 +22,27 @@ export function Sidebar() {
 
   const navItems = [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-    { label: "Transactions", href: "/dashboard/transactions", icon: Receipt },
-    { label: "Settings", href: "/dashboard/settings", icon: Settings },
+    { label: "Transactions", href: "/transactions", icon: Receipt },
+    { label: "Settings", href: "/settings", icon: Settings },
   ];
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-slate-300 hidden md:flex flex-col">
-      <div className="flex h-16 items-center px-6 bg-slate-950">
-        <h1 className="text-lg font-bold text-white tracking-tight">
-          Shree Shyam
-          <br />
-          <span className="text-primary font-medium text-sm">Enterprises</span>
+    <aside className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-800 hidden md:flex flex-col shadow-2xl">
+      <div className="flex h-20 items-center px-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
+        <h1 className="text-xl font-extrabold text-white tracking-tight flex flex-col leading-tight">
+          <span>Shree Shyam</span>
+          <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-[0.2em] mt-0.5">
+            Enterprises
+          </span>
         </h1>
       </div>
-      <nav className="flex-1 space-y-1 px-3 py-6">
+
+      <nav className="flex-1 space-y-1.5 px-4 py-8">
+        <div className="mb-4 px-2">
+          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+            Main Menu
+          </span>
+        </div>
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -43,32 +50,39 @@ export function Sidebar() {
               key={item.label}
               href={item.href}
               className={cn(
-                "group flex items-center rounded-md px-3 py-2.5 text-sm font-medium hover:bg-slate-800 hover:text-white transition-colors",
+                "group relative flex items-center rounded-xl p-3 text-sm font-semibold transition-all duration-300 overflow-hidden",
                 isActive
-                  ? "bg-primary/10 text-primary border-l-2 border-primary"
-                  : "text-slate-300",
+                  ? "bg-emerald-500/10 text-emerald-400 shadow-[inset_0_0_0_1px_rgba(16,185,129,0.1)]"
+                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50",
               )}
             >
+              {isActive && (
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-emerald-500 rounded-full" />
+              )}
               <item.icon
                 className={cn(
-                  "mr-3 h-5 w-5 flex-shrink-0",
+                  "mr-3.5 h-5 w-5 transition-transform duration-300 group-hover:scale-110",
                   isActive
-                    ? "text-primary"
-                    : "text-slate-400 group-hover:text-slate-300",
+                    ? "text-emerald-500 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]"
+                    : "text-slate-500",
                 )}
               />
               {item.label}
+              {isActive && (
+                <div className="absolute right-3 w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              )}
             </Link>
           );
         })}
       </nav>
-      <div className="p-4 border-t border-slate-800">
+
+      <div className="p-4 mt-auto border-t border-slate-800 bg-slate-900/90 backdrop-blur-md">
         <button
           onClick={handleLogout}
-          className="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium text-slate-400 hover:bg-slate-800 hover:text-white transition-colors"
+          className="group flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950/50 border border-slate-800/50 px-4 py-3 text-xs font-bold text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/30 transition-all duration-300"
         >
-          <LogOut className="mr-3 h-5 w-5 flex-shrink-0" />
-          Logout
+          <LogOut className="h-4 w-4 transition-transform group-hover:rotate-12" />
+          LOGOUT
         </button>
       </div>
     </aside>
